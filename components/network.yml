@@ -1,0 +1,14 @@
+$schema: https://aka.ms/dsc/schemas/v3/bundled/config/document.json
+resources:
+
+  - name: SetTimeZone
+    type: ComputerManagementDsc/TimeZone
+    properties:
+      IsSingleInstance: "Yes"
+      TimeZone: "W. Europe Standard Time"
+
+  - name: SetSystemLocale
+    type: ComputerManagementDsc/SystemLocale
+    properties:
+      IsSingleInstance: "Yes"
+      SystemLocale: "de-DE"
