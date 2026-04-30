@@ -1,0 +1,9 @@
+services:
+  web:
+    image: nginx:alpine
+    container_name: ich-kanns-web
+    ports:
+      - "3000:80"
+    volumes:
+      - ./site/index.html:/usr/share/nginx/html/index.html:ro
+    restart: unless-stopped
